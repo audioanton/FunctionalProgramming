@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import static org.junit.Assert.*;
 public class MovieUtilTest {
@@ -50,6 +51,8 @@ public class MovieUtilTest {
         assertEquals("Ufo", actors.getLast());
         assertEquals(2, actors.size());
         assertFalse(actors.contains("Hermione"));
+
+        //Test om fler filmer har samma betyg
     }
 
     @Test
@@ -60,17 +63,29 @@ public class MovieUtilTest {
 
     @Test
     public void countActorsFeaturedInMultipleMovies() {
+        assertEquals(2, m.countActorsFeaturedInMultipleMovies(testMovies));
+        assertEquals(0, m.countActorsFeaturedInMultipleMovies(emptyTest));
     }
 
     @Test
     public void getActorMostFeatured() {
+        assertNotEquals("Pistoler", m.getActorMostFeatured(testMovies));
+        assertEquals("Statist", m.getActorMostFeatured(testMovies));
+        assertThrows(NoSuchElementException.class, () -> m.getActorMostFeatured(emptyTest));
     }
 
     @Test
     public void countDistinctLanguages() {
+        assertNotEquals(13, m.countDistinctLanguages(testMovies));
+        assertEquals(5, m.countDistinctLanguages(testMovies));
+        assertEquals(0, m.countDistinctLanguages(emptyTest));
     }
 
     @Test
     public void existsDuplicateTitle() {
+        assertFalse(m.existsDuplicateTitle(testMovies));
+        testMovies.add(new Movie("5", "title", 1, null, "director", null, 1, null, 1));
+        testMovies.add(new Movie("5", "title", 1, null, "director", null, 1, null, 1));
+        assertTrue(m.existsDuplicateTitle(testMovies));
     }
 }
