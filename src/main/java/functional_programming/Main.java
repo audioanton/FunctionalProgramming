@@ -19,7 +19,7 @@ public class Main {
             System.out.printf("Number of actors featured in multiple movies: %d%n", util.countActorsFeaturedInMultipleMovies(movies));
             System.out.printf("The actor(s) featured in most movies: %s%n", util.getActorsMostFeatured(movies));
             System.out.printf("Number of languages listed for movies: %d%n", util.countDistinctInFlatMap(movies, Movie::getLanguages));
-            System.out.printf("Is there duplicate titles in this list: %s%n", util.existsDuplicateTitle(movies));
+            System.out.println(util.existsDuplicateTitle(movies) ? "There are duplicate titles in database." : "All titles are unique.");
 
         } catch (IOException e) {
             e.printStackTrace();
