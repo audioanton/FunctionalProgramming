@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.IntStream;
-
 import static org.junit.Assert.*;
+
 public class MovieUtilTest {
     MovieUtil m = new MovieUtil();
 
@@ -24,9 +24,9 @@ public class MovieUtilTest {
 
     @Test
     public void countMovies() {
-        assertEquals(1, m.countMovies(testMovies));
-        assertEquals(0, m.countMovies(emptyTest));
-        assertEquals(0, m.countMovies(List.of(testMovie)));
+        assertEquals(1, m.countMovies(testMovies, 1975));
+        assertEquals(0, m.countMovies(emptyTest, 1975));
+        assertEquals(0, m.countMovies(List.of(testMovie), 1975));
     }
 
     @Test

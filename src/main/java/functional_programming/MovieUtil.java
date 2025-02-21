@@ -7,8 +7,8 @@ import java.util.stream.Collectors;
 public class MovieUtil {
 
 // Hur många filmer gjordes 1975 (enligt vårt data). Returnera ett tal
-    public long countMovies(List<Movie> movies) {
-        return movies.stream().filter(movie -> movie.getYear() == 1975).count();
+    public long countMovies(List<Movie> movies, int year) {
+        return movies.stream().filter(movie -> movie.getYear() == year).count();
     }
 
 // Hitta längden på den film som var längst (högst runtime). Returnera ett tal.

@@ -11,7 +11,7 @@ public class Main {
 
             MovieUtil util = new MovieUtil();
 
-            System.out.printf("Number of Movies 1975: %d%n", util.countMovies(movies));
+            System.out.printf("Number of Movies 1975: %d%n", util.countMovies(movies, 1975));
             System.out.printf("Longest movie: %d minutes%n", util.highestIntValueInMovie(movies, Movie::getRuntime));
             System.out.printf("Unique genres: %d%n", util.countDistinctInFlatMap(movies, Movie::getGenres));
             System.out.printf("Actors in highest rated movie: %s%n", util.getActorsInBestMovie(movies));
