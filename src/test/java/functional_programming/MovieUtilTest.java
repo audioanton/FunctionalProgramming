@@ -10,15 +10,15 @@ import java.util.stream.IntStream;
 import static org.junit.Assert.*;
 public class MovieUtilTest {
     MovieUtil m = new MovieUtil();
-    List<Movie> testMovies = List.of(
+    final List<Movie> testMovies = List.of(
             new Movie("1", "Rambo", 1999, List.of("drama", "romcom"), "Lasse", List.of("Sylvester"), 10.0, List.of("English", "Svenska", "Danish"), 103),
             new Movie("2", "Harry Potter", 2003, List.of("fantasy", "romcom"), "Jessica", List.of("Hermione", "Statist", "Pistoler"), 10.0, List.of("English", "Svenska", "Chinese"), 15),
             new Movie("3", "Dumbo", 1975, List.of("drama", "romcom", "animation"), "Lasse", List.of("Elefanto", "Statist", "Pistoler"), 100.0, List.of("English", "Svenska", "Francaise"), 210),
             new Movie("4", "Alien", 1999, List.of("horror, romcom"), "Jessica", List.of("Bingo", "Ufo", "Statist"), 1000.0, List.of("English", "Svenska"), 143),
             new Movie("5", "Wall-E", 1999, List.of("drama", "romcom", "action"), "Lasse", List.of("Robot", "Eva"), 50.43, List.of("English", "Svenska"), 67)
     );
-    List<Movie> emptyTest = Collections.emptyList();
-    Movie testMovie = new Movie("1", "1", 1, List.of("1", "1"), "1", List.of("1", "1"), 1, List.of("1", "1"), 1);
+    final List<Movie> emptyTest = Collections.emptyList();
+    final Movie testMovie = new Movie("1", "1", 1, List.of("1", "1"), "1", List.of("1", "1"), 1, List.of("1", "1"), 1);
 
 
     @Test

@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         try {
             Repository repository = new Repository();
-            List<Movie> movies = repository.getMoviesByField("year",null,1975);
+            final List<Movie> movies = repository.getMoviesByField("year",null,1975);
 
             MovieUtil util = new MovieUtil();
 
