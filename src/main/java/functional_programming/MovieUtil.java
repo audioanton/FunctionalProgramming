@@ -14,7 +14,7 @@ public class MovieUtil {
 // Hitta längden på den film som var längst (högst runtime). Returnera ett tal.
 //    Higher Order Function
     public int highestIntValueInMovie(List<Movie> movies, Function<Movie, Integer> getValue) {
-        return movies.stream().map(getValue).max(Integer::compareTo).orElse(0);
+        return movies.stream().map(getValue::apply).max(Integer::compareTo).orElse(0);
     }
 
 // Hur många UNIKA genrer hade filmerna från 1975. Returnera ett tal.

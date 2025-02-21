@@ -75,6 +75,7 @@ public class MovieUtilTest {
     public void getMovieTitleForLeastActors() {
         assertNotEquals("Harry Potter", m.getMovieTitleForLeastActors(testMovies));
         assertEquals("Rambo", m.getMovieTitleForLeastActors(testMovies));
+        assertEquals("No title found", m.getMovieTitleForLeastActors(emptyTest));
     }
 
     @Test
@@ -119,6 +120,7 @@ public class MovieUtilTest {
         movies.add(new Movie("5", "title", 1, null, "director", null, 1, null, 1));
         movies.add(new Movie("5", "title", 1, null, "director", null, 1, null, 1));
         assertTrue(m.existsDuplicateTitle(movies));
+        assertFalse(m.existsDuplicateTitle(emptyTest));
     }
 
 }
