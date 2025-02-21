@@ -10,6 +10,7 @@ import java.util.stream.IntStream;
 import static org.junit.Assert.*;
 public class MovieUtilTest {
     MovieUtil m = new MovieUtil();
+
     final List<Movie> testMovies = List.of(
             new Movie("1", "Rambo", 1999, List.of("drama", "romcom"), "Lasse", List.of("Sylvester"), 10.0, List.of("English", "Svenska", "Danish"), 103),
             new Movie("2", "Harry Potter", 2003, List.of("fantasy", "romcom"), "Jessica", List.of("Hermione", "Statist", "Pistoler"), 10.0, List.of("English", "Svenska", "Chinese"), 15),
